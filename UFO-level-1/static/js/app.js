@@ -8,8 +8,6 @@ tableData.forEach( sighting => {
     console.log(sighting);
 });
 
-// let tr = d3.select("thead > tr");
-
 tableData.forEach( sighting => {
     let tr = tbody.append("tr");
     Object.entries(sighting).forEach( function ([key,value]) {
@@ -17,3 +15,17 @@ tableData.forEach( sighting => {
         cell.text(value);
     });
 });
+
+var button = d3.select("#filter-btn");
+var datetime = d3.select("#datetime");
+var form = d3.select("form");
+
+button.on("click", runEnter);
+
+
+function runEnter () {
+
+    d3.event.preventDefault();
+
+    var input = 
+}
